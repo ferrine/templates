@@ -171,6 +171,18 @@
     \end{addmargin}%
 ((*- endblock output *))
 
+((* block input_group *))
+    ((*- if cell.metadata.get('nbconvert', {}).get('show_code', False) -*))
+        ((( super() )))
+    ((*- endif -*))
+((* endblock input_group *))
+
+((* block output_group *))
+    ((*- if cell.metadata.get('nbconvert', {}).get('show_result', True) -*))
+        ((( super() )))
+    ((*- endif -*))
+((* endblock output_group *))
+
 %==============================================================================
 % Support Macros
 %==============================================================================

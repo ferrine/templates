@@ -1,0 +1,8 @@
+import matplotlib.pyplot as plt
+import matplotlib
+from IPython.display import set_matplotlib_formats
+plt.style.use('ggplot')
+%pylab inline
+%load_ext rpy2.ipython
+set_matplotlib_formats('png', 'pdf')
+
