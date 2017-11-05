@@ -33,7 +33,9 @@ set cursorline                      " Highlinght current line
 set clipboard=unnamed               " Clipboard sharing
 
 set expandtab                       " Spaces instead of tabs
+set smarttab                        " Tab in the beginning of the line acts like shift
 set tabstop=4                       " <TAB>=N<space>, read mode
+set shiftwidth=4                    " The size of an indent
 set softtabstop=4                   " <TAB>=N<space>, edit mode
 set backspace=indent,eol,start      " make backspace work in usual way
 
