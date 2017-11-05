@@ -30,6 +30,7 @@ filetype plugin indent on    " required
 set number                          " Line numbers
 syntax enable                       " Syntax processing
 set cursorline                      " Highlinght current line
+set clipboard=unnamed               " Clipboard sharing
 
 set expandtab                       " Spaces instead of tabs
 set tabstop=4                       " <TAB>=N<space>, read mode
