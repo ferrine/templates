@@ -9,6 +9,7 @@ Plugin 'iamcco/markdown-preview.vim'
 Plugin 'cohlin/vim-colorschemes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'lyokha/vim-xkbswitch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -61,10 +62,20 @@ set wildmenu                        " Visual menu ':
 
 " Mardown preview
 let g:mkdp_path_to_chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
-nmap <silent> <F8> <Plug>MarkdownPreview        " for normal mode
-imap <silent> <F8> <Plug>MarkdownPreview        " for insert mode
-nmap <silent> <F9> <Plug>StopMarkdownPreview    " for normal mode
-imap <silent> <F9> <Plug>StopMarkdownPreview    " for insert mode
+" for normal mode
+nmap <silent> <F8> <Plug>MarkdownPreview
+" for insert mode
+imap <silent> <F8> <Plug>MarkdownPreview
+" for normal mode
+nmap <silent> <F9> <Plug>StopMarkdownPreview
+" for insert mode
+imap <silent> <F9> <Plug>StopMarkdownPreview
 
 " Vim-Markdown
 let g:vim_markdown_math = 1         " Used as $x^2$, $$x^2$$, escapable as \$x\$ and \$\$x\$\$
+
+" Keyboard Switcher
+let g:XkbSwitchEnabled = 1          " enable lyokha/vim-xkbswitch
+" This is platform specific and for macos needs 
+" https://github.com/vovkasm/input-source-switcher installed
+let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
