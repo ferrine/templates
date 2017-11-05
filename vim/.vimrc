@@ -53,11 +53,12 @@ set hlsearch                        " highlight matches
 " This will jump to the last known cursor position unless
 "   - the position is invalid
 "   - the position is inside an event handler
-if has("autocmd") 
+if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
-let mapleader=","
+let mapleader=","                   " <leader> key
+" Remove highliting with shortcut
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Folding settings
@@ -86,7 +87,7 @@ let g:vim_markdown_math = 1         " Used as $x^2$, $$x^2$$, escapable as \$x\$
 
 " Keyboard Switcher
 let g:XkbSwitchEnabled = 1          " enable lyokha/vim-xkbswitch
-" This is platform specific and for macos needs 
+" This is platform specific and for macos needs
 " https://github.com/vovkasm/input-source-switcher installed
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 
@@ -94,4 +95,15 @@ let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 " <leader>(l)<CR> inserts line above(below)
 nnoremap <silent><leader>l<CR> :set paste<CR>m`o<Esc>``:set nopaste<CR><C-y>
 nnoremap <silent><leader><CR> :set paste<CR>m`O<Esc>``:set nopaste<CR><C-e>
+
+fun! TrimWhitespace()               " Removes all trailing spaces
+    " Save position
+    normal m`
+    " Ramove all trailing spaces
+    %s/\s\+$//e
+    " Return to saved position 
+    normal ``
+endfun
+" :TrimWhitespace
+command! TrimWhitespace call TrimWhitespace()
 
