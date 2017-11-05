@@ -48,6 +48,13 @@ set matchtime=0                     " remove delay after inserting a closing bra
 set incsearch                       " search as typed
 set hlsearch                        " highlight matches
 
+" This will jump to the last known cursor position unless
+"   - the position is invalid
+"   - the position is inside an event handler
+if has("autocmd") 
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
 let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
 
