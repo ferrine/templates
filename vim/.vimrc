@@ -67,7 +67,7 @@ set foldmethod=indent               " python like folds
 nnoremap <space> za
 
 set wildmenu                        " Visual menu ':
-
+set mouse=a                         " mouse pointing
 " Mardown preview
 let g:mkdp_path_to_chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
 " for normal mode
@@ -89,7 +89,7 @@ let g:XkbSwitchEnabled = 1          " enable lyokha/vim-xkbswitch
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
 
 " Custom remaps
-" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
-
+" <leader>(l)<CR> inserts line above(below)
 nnoremap <silent><leader>l<CR> :set paste<CR>m`o<Esc>``:set nopaste<CR><C-y>
 nnoremap <silent><leader><CR> :set paste<CR>m`O<Esc>``:set nopaste<CR><C-e>
+
