@@ -87,3 +87,9 @@ let g:XkbSwitchEnabled = 1          " enable lyokha/vim-xkbswitch
 " This is platform specific and for macos needs 
 " https://github.com/vovkasm/input-source-switcher installed
 let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+
+" Custom remaps
+" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
+
+nnoremap <silent><leader>l<CR> :set paste<CR>m`o<Esc>``:set nopaste<CR><C-y>
+nnoremap <silent><leader><CR> :set paste<CR>m`O<Esc>``:set nopaste<CR><C-e>
