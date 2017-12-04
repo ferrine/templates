@@ -73,14 +73,18 @@ set wildmenu                        " Visual menu ':
 set mouse=a                         " mouse pointing
 " Mardown preview
 let g:mkdp_path_to_chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
-" for normal mode
-nmap <silent> <F8> <Plug>MarkdownPreview
-" for insert mode
-imap <silent> <F8> <Plug>MarkdownPreview
-" for normal mode
-nmap <silent> <F9> <Plug>StopMarkdownPreview
-" for insert mode
-imap <silent> <F9> <Plug>StopMarkdownPreview
+let b:MarkdownPreviewStatus=0
+function! ToggleMarkdownPreview()
+    if b:MarkdownPreviewStatus==0
+        :MarkdownPreview
+        let b:MarkdownPreviewStatus=1
+    else
+        :MarkdownPreviewStop
+        let b:MarkdownPreviewStatus=0
+    endif
+endfunction
+
+nmap <silent> <F8> :call ToggleMarkdownPreview()<CR>
 
 " Vim-Markdown
 let g:vim_markdown_math = 1         " Used as $x^2$, $$x^2$$, escapable as \$x\$ and \$\$x\$\$
@@ -128,4 +132,6 @@ function! ToggleSpell()
 endfunction
 
 nmap <silent> <F12> :call ToggleSpell()<CR>
+
+nnoremap <silent> <leader>p :call SaveFile()<cr>
 
