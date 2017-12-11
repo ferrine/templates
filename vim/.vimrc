@@ -10,6 +10,7 @@ Plugin 'cohlin/vim-colorschemes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'lyokha/vim-xkbswitch'
+Plugin 'ferrine/md-img-paste.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -133,5 +134,5 @@ endfunction
 
 nmap <silent> <F12> :call ToggleSpell()<CR>
 
-nnoremap <silent> <leader>p :call SaveFile()<cr>
+autocmd FileType markdown nmap <silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
