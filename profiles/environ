@@ -1,0 +1,4 @@
+export TARGET="$HOME"
+export DIR="profiles"
+export FILES=( .zshrc )
+

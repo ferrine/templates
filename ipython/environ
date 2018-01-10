@@ -1,0 +1,4 @@
+export TARGET="$HOME/.ipython"
+export DIR="ipython"
+export FILES=( profile_default/startup/01_magic_and_graphics.ipy )
+

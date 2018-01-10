@@ -1,0 +1,4 @@
+export TARGET="$HOME/.jupyter"
+export DIR="jupyter"
+export FILES=( jupyter_notebook_config.py templates )
+
