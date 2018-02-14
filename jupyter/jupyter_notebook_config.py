@@ -8,5 +8,5 @@ c.Exporter.template_file = 'russian_article'
 ##################################
 c.NotebookApp.ip = '*'
 c.NotebookApp.open_browser = False
-c.NotebookApp.password = 'md5:c21f969b5f03d33d43e04f8f136e7682'
+c.NotebookApp.password = 'sha1:5172264cc7d8:4e7de476e2395ee9dae586990406b4595e5064a8'
 
