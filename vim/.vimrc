@@ -32,7 +32,7 @@ call vundle#end()            " required
 set number                          " line numbers
 syntax enable                       " syntax processing
 set cursorline                      " highlinght current line
-set clipboard=unnamed               " clipboard sharing
+set clipboard=unnamedplus           " clipboard sharing
 
 " Tab settings
 set expandtab                       " spaces instead of tabs
@@ -122,7 +122,7 @@ nnoremap <space> za
 set wildmenu                        " visual menu ':
 set mouse=a                         " mouse pointing
 " mardown preview
-let g:mkdp_path_to_chrome="/applications/google\\ chrome.app/contents/macos/google\\ chrome"
+let g:mkdp_path_to_chrome="/usr/bin/google-chrome"
 
 function! ToggleMarkdownPreview()
     if b:MarkdownPreviewStatus==0
@@ -143,7 +143,7 @@ let g:vim_markdown_math = 1         " Used as $x^2$, $$x^2$$, escapable as \$x\$
 let g:XkbSwitchEnabled = 1          " enable lyokha/vim-xkbswitch
 " This is platform specific and for macos needs
 " https://github.com/vovkasm/input-source-switcher installed
-let g:XkbSwitchLib = '/usr/local/lib/libInputSourceSwitcher.dylib'
+let g:XkbSwitchLib = '/usr/lib/libxkbswitch.so' 
 
 " Custom remaps
 " <leader>(l)<CR> inserts line above(below)
