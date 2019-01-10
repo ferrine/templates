@@ -13,7 +13,7 @@ Plugin 'lyokha/vim-xkbswitch'
 Plugin 'ferrine/md-img-paste.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'LucHermitte/lh-vim-lib'
-
+Plugin 'mhinz/vim-signify'
 " all of your plugins must be added before the following line
 call vundle#end()            " required
 
@@ -110,7 +110,6 @@ endif
 let mapleader=","                   " <leader> key
 " remove highliting with shortcut
 nnoremap <leader><space> :nohlsearch<cr>
-
 " folding settings
 set foldenable                      " folding (hide some nested code)
 set foldlevelstart=10               " 10 folds then are ok
